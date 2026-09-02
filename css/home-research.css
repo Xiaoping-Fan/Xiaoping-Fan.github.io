@@ -2664,3 +2664,69 @@
         border-radius: 16px;
     }
 }
+
+
+/* =========================================================
+   41. Mobile hero stacking fix
+   ========================================================= */
+
+/*
+   Final responsive overrides must come after the later desktop hero
+   refinements above; otherwise the desktop two-column grid wins in
+   the cascade on small screens.
+*/
+@media (max-width: 900px) {
+
+    .home-page-v2 .hero-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .home-page-v2 .hero-text {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .home-page-v2 .hero-image {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        justify-self: stretch;
+    }
+
+    .home-page-v2 .hero-image img {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .home-page-v2 .hero-content {
+        padding: 26px 24px 24px;
+        gap: 26px;
+    }
+
+    .home-page-v2 .hero-label {
+        margin-bottom: 22px;
+        white-space: normal;
+    }
+
+    .home-page-v2 .hero h1 {
+        width: 100%;
+        max-width: none;
+        font-size: clamp(32px, 10.2vw, 39px);
+        line-height: 1.07;
+        letter-spacing: -0.025em;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .home-page-v2 .hero-image img {
+        height: auto;
+        aspect-ratio: 1.28;
+        object-fit: cover;
+        object-position: 52% center;
+    }
+}
