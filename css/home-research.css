@@ -1,0 +1,2666 @@
+/* =========================================================
+   Home + Research update
+   Load AFTER css/style.css
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Shared palette / fallbacks
+   --------------------------------------------------------- */
+
+.home-page-v2,
+.research-page {
+    --site-ivory: var(--bg-main, #F4EBDD);
+    --site-forest: var(--text-main, #173B2D);
+    --site-body: var(--text-body, #425A4A);
+    --site-soft: var(--text-soft, #616C5D);
+    --site-green: var(--accent-green, #59733D);
+    --site-gold: var(--accent-gold, #D0A62F);
+    --site-olive: var(--olive-dark, #435A31);
+
+    background: var(--site-ivory);
+}
+
+
+/* ---------------------------------------------------------
+   Shared top navigation
+   --------------------------------------------------------- */
+
+.home-page-v2 .site-header,
+.research-page .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+}
+
+.home-page-v2 .nav a[aria-current="page"]::after,
+.research-page .nav a[aria-current="page"]::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Hero
+   --------------------------------------------------------- */
+
+.home-page-v2 .hero,
+.home-page-v2 .hero-inner {
+    min-height: auto;
+}
+
+.home-page-v2 .hero {
+    background: var(--site-ivory);
+}
+
+.home-page-v2 .hero-inner {
+    display: block;
+
+    padding-top:
+        clamp(140px, 10vw, 170px);
+
+    padding-bottom:
+        clamp(46px, 4.5vw, 64px);
+}
+
+.home-page-v2 .hero-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(420px, 1.08fr);
+
+    gap:
+        clamp(38px, 5vw, 72px);
+
+    align-items: center;
+
+    padding:
+        clamp(28px, 3.2vw, 44px);
+
+    border:
+        1px solid rgba(89, 115, 61, 0.18);
+
+    border-radius: 24px;
+
+    background:
+        rgba(255, 252, 244, 0.68);
+
+    box-shadow:
+        0 10px 30px rgba(23, 59, 45, 0.04);
+}
+
+.home-page-v2 .hero-text {
+    max-width: 570px;
+}
+
+.home-page-v2 .hero-label {
+    margin:
+        0
+        0
+        clamp(18px, 2vw, 26px);
+
+    color: var(--site-green);
+
+    font-size:
+        clamp(10.5px, 0.74vw, 12px);
+
+    font-weight: 650;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.home-page-v2 .hero h1 {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(40px, 3.55vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.06;
+    letter-spacing: -0.032em;
+}
+
+.home-page-v2 .hero-intro {
+    max-width: 535px;
+
+    margin:
+        clamp(24px, 2.5vw, 32px)
+        0
+        0;
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(14px, 0.98vw, 16px);
+
+    line-height: 1.72;
+}
+
+.home-page-v2 .hero-topics {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top:
+        clamp(20px, 2vw, 28px);
+
+    color: var(--site-soft);
+
+    font-size:
+        clamp(11.5px, 0.8vw, 13px);
+
+    line-height: 1.6;
+}
+
+.home-page-v2 .hero-image {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+
+    justify-self: end;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+.home-page-v2 .hero-image img {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1.42;
+
+    object-fit: cover;
+    object-position: 52% center;
+
+    border-radius: inherit;
+}
+
+.home-page-v2 .hero-footer {
+    display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   Shared homepage section rhythm
+   --------------------------------------------------------- */
+
+.home-page-v2 .section {
+    padding:
+        clamp(48px, 4.8vw, 66px)
+        0
+        clamp(54px, 5.2vw, 72px);
+
+    border-top: 0;
+
+    background: var(--site-ivory);
+}
+
+.home-page-v2 .section-header {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    margin-bottom:
+        clamp(25px, 2.8vw, 36px);
+}
+
+.home-page-v2 .section-number {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 38px;
+    height: 28px;
+
+    padding: 0 10px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.28);
+
+    border-radius: 999px;
+
+    background:
+        rgba(221, 231, 206, 0.70);
+
+    color: var(--site-green);
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.home-page-v2 .section h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(38px, 3.55vw, 55px);
+
+    font-weight: 400;
+
+    line-height: 1.03;
+    letter-spacing: -0.03em;
+}
+
+
+/* ---------------------------------------------------------
+   About
+   --------------------------------------------------------- */
+
+.home-page-v2 .about-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, 0.6fr);
+
+    gap:
+        clamp(24px, 3vw, 38px);
+
+    margin: 0;
+
+    align-items: stretch;
+}
+
+.home-page-v2 .about-primary,
+.home-page-v2 .about-secondary {
+    max-width: none;
+
+    padding:
+        clamp(28px, 2.8vw, 36px);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 24px rgba(23, 59, 45, 0.032);
+}
+
+.home-page-v2 .about-primary {
+    border:
+        1px solid rgba(89, 115, 61, 0.18);
+
+    background:
+        rgba(255, 252, 244, 0.66);
+}
+
+.home-page-v2 .about-secondary {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border:
+        1px solid rgba(208, 166, 47, 0.20);
+
+    background:
+        rgba(208, 166, 47, 0.07);
+}
+
+.home-page-v2 .about-lead {
+    max-width: 790px;
+
+    margin:
+        0
+        0
+        clamp(20px, 2vw, 28px);
+
+    color: var(--site-forest);
+
+    font-size:
+        clamp(17px, 1.13vw, 19px);
+
+    line-height: 1.72;
+}
+
+.home-page-v2 .about-primary > p:not(.about-lead) {
+    max-width: 790px;
+
+    margin-bottom: 0;
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(14px, 0.95vw, 16px);
+
+    line-height: 1.76;
+}
+
+.home-page-v2 .about-kicker {
+    margin:
+        0
+        0
+        14px;
+
+    color: #8A6D12;
+
+    font-size:
+        clamp(11px, 0.78vw, 12.5px);
+
+    font-weight: 650;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.home-page-v2 .about-expertise {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.home-page-v2 .about-expertise span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 34px;
+
+    padding:
+        7px
+        11px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.24);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 252, 244, 0.76);
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(11.5px, 0.82vw, 13px);
+
+    line-height: 1.25;
+}
+
+.home-page-v2 .about-expertise span:nth-child(3n + 2) {
+    border-color:
+        rgba(208, 166, 47, 0.35);
+}
+
+.home-page-v2 .about-links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top:
+        clamp(28px, 3vw, 38px);
+}
+
+.home-page-v2 .about-link-item {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 38px;
+
+    padding:
+        5px
+        12px
+        5px
+        6px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.20);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 252, 244, 0.86);
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(11.5px, 0.82vw, 13px);
+}
+
+.home-page-v2 .about-link-item:hover {
+    border-color:
+        rgba(89, 115, 61, 0.42);
+
+    color: var(--site-forest);
+}
+
+.home-page-v2 .about-icon {
+    width: 27px;
+    height: 27px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 27px;
+
+    border-radius: 50%;
+
+    background: var(--site-green);
+
+    color: #fff;
+}
+
+.home-page-v2 .about-icon-gold {
+    background: var(--site-gold);
+}
+
+.home-page-v2 .about-icon-text {
+    background: #78A641;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.home-page-v2 .about-icon svg {
+    width: 15px;
+    height: 15px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ---------------------------------------------------------
+   Research — one large card
+   --------------------------------------------------------- */
+
+.home-page-v2 .research-list {
+    display: block;
+
+    padding:
+        0
+        clamp(22px, 2.5vw, 32px);
+
+    border:
+        1px solid rgba(89, 115, 61, 0.18);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 252, 244, 0.64);
+
+    box-shadow:
+        0 8px 24px rgba(23, 59, 45, 0.032);
+}
+
+.home-page-v2 .research-item {
+    display: grid;
+
+    grid-template-columns:
+        46px
+        minmax(0, 1fr)
+        28px;
+
+    gap:
+        clamp(18px, 2.5vw, 32px);
+
+    align-items: start;
+
+    margin: 0;
+
+    padding:
+        clamp(24px, 2.5vw, 34px)
+        0;
+
+    border: 0;
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.15);
+
+    border-radius: 0;
+
+    background: transparent;
+
+    transition:
+        padding-left 0.22s ease,
+        color 0.22s ease;
+}
+
+.home-page-v2 .research-item:last-child {
+    border-bottom: 0;
+}
+
+.home-page-v2 .research-item:hover {
+    padding-left: 8px;
+}
+
+.home-page-v2 .research-number {
+    padding-top: 7px;
+
+    color: var(--site-green);
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.home-page-v2 .research-text,
+.home-page-v2 .research-text h3 {
+    max-width: none;
+}
+
+.home-page-v2 .research-text h3 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(24px, 2.2vw, 34px);
+
+    font-weight: 400;
+
+    line-height: 1.12;
+    letter-spacing: -0.022em;
+}
+
+.home-page-v2 .research-text p {
+    width: min(100%, 900px);
+    max-width: 900px;
+
+    margin:
+        clamp(13px, 1.4vw, 18px)
+        0
+        0;
+
+    color: var(--site-soft);
+
+    font-size:
+        clamp(13.5px, 0.92vw, 15.5px);
+
+    line-height: 1.7;
+}
+
+.home-page-v2 .research-arrow {
+    padding-top: 3px;
+
+    color: var(--site-green);
+
+    font-size: 21px;
+
+    opacity: 0.55;
+
+    transition:
+        transform 0.22s ease,
+        opacity 0.22s ease;
+}
+
+.home-page-v2 .research-item:hover .research-arrow {
+    transform: translateX(4px);
+
+    opacity: 1;
+}
+
+.home-page-v2 .research-more-link {
+    margin-top:
+        clamp(24px, 2.6vw, 34px);
+}
+
+
+/* ---------------------------------------------------------
+   Featured Papers — one large card
+   --------------------------------------------------------- */
+
+.home-page-v2 .papers-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 0;
+
+    align-items: stretch;
+
+    padding:
+        clamp(20px, 2vw, 26px);
+
+    border:
+        1px solid rgba(89, 115, 61, 0.18);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 252, 244, 0.64);
+
+    box-shadow:
+        0 8px 24px rgba(23, 59, 45, 0.032);
+}
+
+.home-page-v2 .paper-card {
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    max-width: none;
+
+    padding:
+        0
+        clamp(20px, 2.3vw, 30px);
+
+    border: 0;
+    border-right:
+        1px solid rgba(89, 115, 61, 0.15);
+
+    border-radius: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+.home-page-v2 .paper-card:first-child {
+    padding-left: 0;
+}
+
+.home-page-v2 .paper-card:last-child {
+    padding-right: 0;
+
+    border-right: 0;
+}
+
+.home-page-v2 .paper-cover {
+    width: min(100%, 290px);
+
+    margin-inline: auto;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: transparent;
+}
+
+.home-page-v2 .paper-cover img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: inherit;
+
+    background: transparent;
+}
+
+.home-page-v2 .paper-meta {
+    margin:
+        18px
+        0
+        9px;
+
+    padding:
+        6px
+        9px;
+
+    align-self: flex-start;
+
+    border:
+        1px solid rgba(208, 166, 47, 0.18);
+
+    border-radius: 999px;
+
+    background:
+        rgba(208, 166, 47, 0.14);
+
+    color: #8A6D12;
+
+    font-family: inherit;
+
+    font-size:
+        clamp(10.5px, 0.75vw, 12px);
+
+    line-height: 1.35;
+}
+
+.home-page-v2 .paper-card h3 {
+    margin: 0;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(16.5px, 1.22vw, 21px);
+
+    font-weight: 500;
+
+    line-height: 1.36;
+    letter-spacing: -0.015em;
+}
+
+.home-page-v2 .paper-description {
+    flex-grow: 1;
+
+    margin:
+        13px
+        0
+        0;
+
+    color: var(--site-soft);
+
+    font-size:
+        clamp(12.5px, 0.85vw, 14px);
+
+    line-height: 1.65;
+}
+
+.home-page-v2 .section-link {
+    margin-top:
+        clamp(28px, 3vw, 42px);
+
+    text-align: right;
+}
+
+.home-page-v2 .section-link a {
+    display: inline-block;
+
+    padding-bottom: 3px;
+
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.34);
+
+    color: var(--site-green);
+
+    font-size:
+        clamp(12.5px, 0.86vw, 14px);
+
+    font-weight: 600;
+}
+
+.home-page-v2 .section-link a:hover {
+    color: var(--site-olive);
+}
+
+
+/* =========================================================
+   RESEARCH PAGE
+   ========================================================= */
+
+.research-page .research-page-hero {
+    padding:
+        clamp(140px, 10vw, 170px)
+        0
+        clamp(44px, 4vw, 60px);
+}
+
+.research-page .research-page-hero h1 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(54px, 5.5vw, 84px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+}
+
+.research-page .research-page-subtitle {
+    max-width: 820px;
+
+    margin:
+        clamp(22px, 2vw, 30px)
+        0
+        0;
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(15px, 1vw, 17px);
+
+    line-height: 1.72;
+}
+
+.research-page .research-page-body {
+    padding:
+        0
+        0
+        clamp(88px, 8vw, 120px);
+}
+
+.research-page .research-overview-card,
+.research-page .research-programme-card,
+.research-page .research-methods-card {
+    border:
+        1px solid rgba(89, 115, 61, 0.18);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 252, 244, 0.66);
+
+    box-shadow:
+        0 8px 26px rgba(23, 59, 45, 0.035);
+}
+
+.research-page .research-overview-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(130px, 0.28fr)
+        minmax(0, 1fr);
+
+    gap:
+        clamp(24px, 4vw, 56px);
+
+    padding:
+        clamp(30px, 3vw, 44px);
+
+    margin-bottom:
+        clamp(28px, 3vw, 42px);
+}
+
+.research-page .research-overview-label,
+.research-page .research-theme-kicker,
+.research-page .selected-papers-label {
+    color: #8A6D12;
+
+    font-size:
+        clamp(11px, 0.78vw, 12.5px);
+
+    font-weight: 650;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.research-page .research-overview-copy {
+    max-width: 820px;
+}
+
+.research-page .research-overview-copy p {
+    color: var(--site-body);
+
+    font-size:
+        clamp(14px, 0.95vw, 16px);
+
+    line-height: 1.78;
+}
+
+.research-page .research-overview-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.research-page .research-overview-lead {
+    color: var(--site-forest) !important;
+
+    font-size:
+        clamp(17px, 1.12vw, 19px) !important;
+}
+
+.research-page .research-programme-card {
+    overflow: hidden;
+}
+
+.research-page .research-theme {
+    scroll-margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        clamp(80px, 8vw, 112px)
+        minmax(0, 1fr);
+
+    gap:
+        clamp(22px, 3vw, 42px);
+
+    padding:
+        clamp(38px, 4vw, 58px)
+        clamp(30px, 3.2vw, 46px);
+
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.15);
+}
+
+.research-page .research-theme:last-child {
+    border-bottom: 0;
+}
+
+.research-page .research-theme-marker {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+.research-page .research-theme-number {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 38px;
+    height: 28px;
+
+    padding: 0 10px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.28);
+
+    border-radius: 999px;
+
+    background:
+        rgba(221, 231, 206, 0.72);
+
+    color: var(--site-green);
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.research-page .research-theme-icon {
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--site-green);
+
+    color: #fff;
+}
+
+.research-page .research-theme-icon-gold {
+    background: var(--site-gold);
+}
+
+.research-page .research-theme-icon svg {
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.research-page .research-theme-content {
+    max-width: 930px;
+}
+
+.research-page .research-theme-kicker {
+    margin:
+        0
+        0
+        11px;
+}
+
+.research-page .research-theme h2 {
+    max-width: 860px;
+
+    margin:
+        0
+        0
+        clamp(19px, 2vw, 27px);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(29px, 2.7vw, 43px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+    letter-spacing: -0.026em;
+}
+
+.research-page .research-theme-content > p {
+    max-width: 805px;
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(14px, 0.95vw, 16px);
+
+    line-height: 1.76;
+}
+
+.research-page .research-tags,
+.research-page .research-methods-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top:
+        clamp(21px, 2vw, 29px);
+}
+
+.research-page .research-tags span,
+.research-page .research-methods-tags span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 34px;
+
+    padding:
+        7px
+        11px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.24);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 252, 244, 0.82);
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(11.5px, 0.82vw, 13px);
+
+    line-height: 1.25;
+}
+
+.research-page .research-tags span:nth-child(even),
+.research-page .research-methods-tags span:nth-child(even) {
+    border-color:
+        rgba(208, 166, 47, 0.34);
+}
+
+
+/* Selected publications inside each programme */
+
+.research-page .selected-papers {
+    max-width: 830px;
+
+    margin-top:
+        clamp(30px, 3vw, 42px);
+
+    padding-top:
+        clamp(22px, 2vw, 28px);
+
+    border-top:
+        1px solid rgba(89, 115, 61, 0.14);
+}
+
+.research-page .selected-papers-label {
+    margin:
+        0
+        0
+        11px;
+
+    color: var(--site-green);
+}
+
+.research-page .selected-papers a {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    gap:
+        18px;
+
+    align-items: baseline;
+
+    padding:
+        12px
+        0;
+
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.11);
+}
+
+.research-page .selected-papers a:last-child {
+    border-bottom: 0;
+}
+
+.research-page .selected-papers a > span {
+    color: var(--site-body);
+
+    font-size:
+        clamp(12.8px, 0.88vw, 14px);
+
+    line-height: 1.5;
+}
+
+.research-page .selected-papers a > small {
+    white-space: nowrap;
+
+    color: #8A6D12;
+
+    font-size:
+        clamp(10.5px, 0.74vw, 11.5px);
+}
+
+.research-page .selected-papers a:hover > span {
+    color: var(--site-green);
+}
+
+
+/* Approaches */
+
+.research-page .research-methods-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap:
+        clamp(28px, 4vw, 58px);
+
+    padding:
+        clamp(30px, 3.5vw, 46px);
+
+    margin-top:
+        clamp(28px, 3vw, 42px);
+}
+
+.research-page .research-methods-card h2 {
+    max-width: 520px;
+
+    margin:
+        8px
+        0
+        0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(25px, 2.2vw, 36px);
+
+    font-weight: 400;
+
+    line-height: 1.14;
+}
+
+.research-page .research-methods-tags {
+    align-content: flex-start;
+
+    margin-top: 0;
+}
+
+.research-page .research-page-link {
+    margin-top:
+        clamp(30px, 3vw, 44px);
+
+    text-align: right;
+}
+
+.research-page .research-page-link a {
+    display: inline-block;
+
+    padding-bottom: 3px;
+
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.34);
+
+    color: var(--site-green);
+
+    font-size:
+        clamp(12.5px, 0.86vw, 14px);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .home-page-v2 .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page-v2 .hero-image {
+        max-width: none;
+
+        justify-self: stretch;
+    }
+
+    .home-page-v2 .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page-v2 .papers-grid {
+        grid-template-columns: 1fr;
+
+        padding:
+            0
+            clamp(20px, 3vw, 28px);
+    }
+
+    .home-page-v2 .paper-card {
+        padding:
+            clamp(25px, 3vw, 33px)
+            0;
+
+        border-right: 0;
+        border-bottom:
+            1px solid rgba(89, 115, 61, 0.15);
+    }
+
+    .home-page-v2 .paper-card:first-child {
+        padding-top:
+            clamp(25px, 3vw, 33px);
+    }
+
+    .home-page-v2 .paper-card:last-child {
+        border-bottom: 0;
+    }
+
+    .home-page-v2 .paper-cover {
+        margin-inline: 0;
+    }
+
+    .research-page .research-overview-card,
+    .research-page .research-methods-card {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-theme {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-theme-marker {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .research-page .selected-papers a {
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+    }
+
+    .research-page .selected-papers a > small {
+        white-space: normal;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .home-page-v2 .hero-inner,
+    .research-page .research-page-hero {
+        padding-top: 118px;
+    }
+
+    .home-page-v2 .hero-content {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    .home-page-v2 .section {
+        padding:
+            42px
+            0
+            50px;
+    }
+
+    .home-page-v2 .about-primary,
+    .home-page-v2 .about-secondary,
+    .home-page-v2 .research-list,
+    .home-page-v2 .papers-grid,
+    .research-page .research-overview-card,
+    .research-page .research-programme-card,
+    .research-page .research-methods-card {
+        border-radius: 16px;
+    }
+
+    .home-page-v2 .research-item {
+        grid-template-columns:
+            32px
+            minmax(0, 1fr);
+
+        gap: 14px;
+    }
+
+    .home-page-v2 .research-arrow {
+        display: none;
+    }
+
+    .research-page .research-theme {
+        padding:
+            28px
+            22px;
+    }
+}
+
+
+/* =========================================================
+   About typography consistency
+   ========================================================= */
+
+/*
+   Both About paragraphs are part of the same biography, so keep
+   the same text size. Hierarchy is carried by colour and spacing,
+   not by making the second paragraph visibly smaller.
+*/
+
+.home-page-v2 .about-lead,
+.home-page-v2 .about-primary > p:not(.about-lead) {
+    font-size:
+        clamp(16.5px, 1.08vw, 18px);
+
+    line-height: 1.72;
+}
+
+.home-page-v2 .about-lead {
+    color: var(--site-forest);
+
+    font-weight: 400;
+}
+
+.home-page-v2 .about-primary > p:not(.about-lead) {
+    color: var(--site-body);
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   Research page — alignment and wording refinement
+   ========================================================= */
+
+/* The Overview should read as one coherent card, without a large empty left column. */
+.research-page .research-overview-card {
+    display: block;
+
+    padding:
+        clamp(30px, 3.2vw, 44px);
+}
+
+.research-page .research-overview-copy {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        clamp(28px, 3.4vw, 48px);
+
+    max-width: none;
+
+    margin-top:
+        clamp(16px, 1.8vw, 22px);
+}
+
+.research-page .research-overview-copy p,
+.research-page .research-overview-lead {
+    margin: 0;
+
+    font-size:
+        clamp(14.5px, 0.98vw, 16.5px) !important;
+
+    line-height: 1.74;
+}
+
+.research-page .research-overview-lead {
+    color: var(--site-forest) !important;
+}
+
+.research-page .research-overview-copy p:not(.research-overview-lead) {
+    color: var(--site-body);
+}
+
+
+/* Reduce the oversized left gutter in each research programme. */
+.research-page .research-theme {
+    grid-template-columns:
+        58px
+        minmax(0, 1fr);
+
+    gap:
+        clamp(24px, 2.5vw, 34px);
+
+    padding:
+        clamp(38px, 4vw, 56px)
+        clamp(30px, 3.2vw, 46px);
+}
+
+.research-page .research-theme-marker {
+    gap: 12px;
+}
+
+.research-page .research-theme-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.research-page .research-theme-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.research-page .research-theme-content {
+    max-width: none;
+}
+
+.research-page .research-theme h2 {
+    max-width: 940px;
+
+    font-size:
+        clamp(28px, 2.45vw, 40px);
+}
+
+
+/* Keep the intro under "Research" visually tighter and more intentional. */
+.research-page .research-page-subtitle {
+    max-width: 760px;
+
+    margin-top:
+        clamp(18px, 1.8vw, 24px);
+}
+
+.research-page .research-page-hero {
+    padding-bottom:
+        clamp(38px, 3.5vw, 52px);
+}
+
+
+@media (max-width: 800px) {
+
+    .research-page .research-overview-copy {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-theme {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   Approaches — scale-based visual framework
+   ========================================================= */
+
+.research-page .research-approaches-card {
+    margin-top:
+        clamp(30px, 3.2vw, 46px);
+
+    padding:
+        clamp(30px, 3.4vw, 48px);
+
+    border:
+        1px solid rgba(89, 115, 61, 0.18);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 252, 244, 0.66);
+
+    box-shadow:
+        0 8px 26px rgba(23, 59, 45, 0.035);
+}
+
+.research-page .research-approaches-heading {
+    display: grid;
+
+    grid-template-columns:
+        minmax(270px, 0.9fr)
+        minmax(0, 1.1fr);
+
+    column-gap:
+        clamp(34px, 4vw, 64px);
+
+    align-items: end;
+
+    margin-bottom:
+        clamp(28px, 3vw, 42px);
+}
+
+.research-page .research-approaches-heading .research-overview-label {
+    grid-column: 1 / -1;
+
+    margin:
+        0
+        0
+        9px;
+}
+
+.research-page .research-approaches-heading h2 {
+    max-width: 610px;
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: var(--site-forest);
+
+    font-size:
+        clamp(29px, 2.7vw, 42px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+.research-page .research-approaches-heading > p:last-child {
+    max-width: 590px;
+
+    margin:
+        0
+        0
+        2px;
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(14px, 0.95vw, 16px);
+
+    line-height: 1.74;
+}
+
+
+/* Image + explanatory text */
+.research-page .research-approaches-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(300px, 0.55fr);
+
+    gap:
+        clamp(28px, 3.4vw, 48px);
+
+    align-items: start;
+
+    padding-top:
+        clamp(26px, 2.8vw, 36px);
+
+    border-top:
+        1px solid rgba(89, 115, 61, 0.14);
+}
+
+.research-page .research-approaches-figure {
+    margin: 0;
+}
+
+.research-page .research-approaches-figure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.15);
+
+    border-radius: 16px;
+
+    background: #fbf5e9;
+
+    box-shadow:
+        0 7px 20px rgba(23, 59, 45, 0.045);
+}
+
+.research-page .research-approaches-figure figcaption {
+    max-width: 720px;
+
+    margin-top: 11px;
+
+    color: var(--site-soft);
+
+    font-size:
+        clamp(10.5px, 0.72vw, 12px);
+
+    line-height: 1.55;
+}
+
+
+/* Four scale summaries */
+.research-page .research-scale-summary {
+    min-width: 0;
+}
+
+.research-page .research-scale-row {
+    display: grid;
+
+    grid-template-columns:
+        34px
+        minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding:
+        0
+        0
+        18px;
+
+    margin-bottom: 18px;
+
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.12);
+}
+
+.research-page .research-scale-number {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 24px;
+
+    margin-top: 2px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.27);
+
+    border-radius: 999px;
+
+    background:
+        rgba(221, 231, 206, 0.70);
+
+    color: var(--site-green);
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.research-page .research-scale-row h3 {
+    margin:
+        0
+        0
+        6px;
+
+    color: var(--site-forest);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(14px, 0.98vw, 16px);
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+.research-page .research-scale-row p {
+    margin: 0;
+
+    color: var(--site-body);
+
+    font-size:
+        clamp(12px, 0.82vw, 13.5px);
+
+    line-height: 1.62;
+}
+
+
+/* Integrative tools */
+.research-page .research-integrative-tools {
+    padding-top: 2px;
+}
+
+.research-page .research-integrative-label {
+    margin:
+        0
+        0
+        10px;
+
+    color: #8A6D12;
+
+    font-size:
+        clamp(10.5px, 0.75vw, 12px);
+
+    font-weight: 650;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.research-page .research-integrative-tools .research-methods-tags {
+    margin-top: 0;
+}
+
+
+/* Hide the old card styling if an older CSS rule is still present */
+.research-page .research-methods-card {
+    display: none;
+}
+
+
+@media (max-width: 1050px) {
+
+    .research-page .research-approaches-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-scale-summary {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            0
+            28px;
+    }
+
+    .research-page .research-integrative-tools {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .research-page .research-approaches-heading {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .research-page .research-approaches-heading .research-overview-label {
+        grid-column: auto;
+    }
+
+    .research-page .research-scale-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-integrative-tools {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .research-page .research-approaches-card {
+        padding: 22px;
+
+        border-radius: 16px;
+    }
+
+    .research-page .research-approaches-figure img {
+        border-radius: 12px;
+    }
+}
+
+
+/* =========================================================
+   34. Research scale layout + publication emphasis
+   ========================================================= */
+
+/* Keep all three research programme icons visually consistent. */
+.research-page .research-theme-icon,
+.research-page .research-theme-icon-gold {
+    background: var(--site-green, #59733D);
+}
+
+
+/* Selected publications should read as a highlighted sub-section. */
+.research-page .selected-papers-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: auto;
+
+    margin:
+        0
+        0
+        14px;
+
+    padding:
+        8px
+        13px;
+
+    border:
+        1px solid rgba(208, 166, 47, 0.40);
+
+    border-radius: 999px;
+
+    background:
+        rgba(208, 166, 47, 0.22);
+
+    color: #7E6112;
+
+    font-size:
+        clamp(10.5px, 0.76vw, 12px);
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+}
+
+.research-page .selected-papers {
+    position: relative;
+
+    max-width: 900px;
+
+    margin-top:
+        clamp(32px, 3vw, 44px);
+
+    padding-top:
+        clamp(24px, 2.2vw, 30px);
+}
+
+.research-page .selected-papers::before {
+    content: "";
+
+    position: absolute;
+    top: -1px;
+    left: 0;
+
+    width: 74px;
+    height: 2px;
+
+    background: var(--site-gold, #D0A62F);
+}
+
+
+/* ---------------------------------------------------------
+   Approaches
+   --------------------------------------------------------- */
+
+/* Keep the heading compact and left-aligned. */
+.research-page .research-approaches-heading {
+    display: block;
+
+    max-width: 900px;
+
+    margin-bottom:
+        clamp(24px, 2.7vw, 36px);
+}
+
+.research-page .research-approaches-heading .research-overview-label {
+    margin-bottom: 10px;
+}
+
+.research-page .research-approaches-heading h2 {
+    max-width: 760px;
+
+    margin:
+        0
+        0
+        16px;
+
+    font-size:
+        clamp(30px, 2.9vw, 44px);
+}
+
+.research-page .research-approaches-heading > p:last-child {
+    max-width: 780px;
+
+    margin: 0;
+
+    font-size:
+        clamp(14.5px, 0.98vw, 16.5px);
+}
+
+
+/* Four scales shown horizontally first. */
+.research-page .research-scale-strip {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1.18fr);
+
+    gap:
+        clamp(8px, 1.2vw, 16px);
+
+    align-items: center;
+
+    margin:
+        0
+        0
+        clamp(28px, 3vw, 40px);
+
+    padding:
+        16px
+        clamp(16px, 2vw, 24px);
+
+    border:
+        1px solid rgba(89, 115, 61, 0.15);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 252, 244, 0.62);
+}
+
+.research-page .research-scale-step {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+
+    color: var(--site-forest, #173B2D);
+}
+
+.research-page .research-scale-step > span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 31px;
+    height: 31px;
+
+    flex: 0 0 31px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.25);
+
+    border-radius: 999px;
+
+    background:
+        rgba(221, 231, 206, 0.78);
+
+    color: var(--site-green, #59733D);
+
+    font-size: 10.5px;
+    font-weight: 700;
+}
+
+.research-page .research-scale-step strong {
+    min-width: 0;
+
+    font-size:
+        clamp(11.5px, 0.82vw, 13.5px);
+
+    font-weight: 600;
+
+    line-height: 1.28;
+}
+
+.research-page .research-scale-arrow {
+    color: var(--site-green, #59733D);
+
+    font-size: 18px;
+
+    opacity: 0.62;
+}
+
+
+/* Detail section: text on the left, visual on the right. */
+.research-page .research-approach-rows {
+    overflow: hidden;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.15);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 252, 244, 0.48);
+}
+
+.research-page .research-approach-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.18fr)
+        minmax(250px, 0.82fr);
+
+    gap:
+        clamp(32px, 4vw, 62px);
+
+    align-items: center;
+
+    padding:
+        clamp(30px, 3.5vw, 48px)
+        clamp(28px, 3.2vw, 44px);
+
+    border-bottom:
+        1px solid rgba(89, 115, 61, 0.13);
+
+    scroll-margin-top: 90px;
+}
+
+.research-page .research-approach-row:last-child {
+    border-bottom: 0;
+}
+
+.research-page .research-approach-copy {
+    max-width: 720px;
+}
+
+.research-page .research-approach-subtitle {
+    margin:
+        0
+        0
+        8px;
+
+    color: #A77E10;
+
+    font-size:
+        clamp(11px, 0.78vw, 12.5px);
+
+    font-weight: 650;
+
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+}
+
+.research-page .research-approach-copy h3 {
+    margin:
+        0
+        0
+        16px;
+
+    color: var(--site-forest, #173B2D);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(26px, 2.25vw, 36px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+    letter-spacing: -0.022em;
+}
+
+.research-page .research-approach-copy > p:not(.research-approach-subtitle) {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: var(--site-body, #425A4A);
+
+    font-size:
+        clamp(14px, 0.95vw, 16px);
+
+    line-height: 1.74;
+}
+
+.research-page .research-approach-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top:
+        clamp(18px, 2vw, 24px);
+}
+
+.research-page .research-approach-tags span {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 32px;
+
+    padding:
+        6px
+        10px;
+
+    border:
+        1px solid rgba(89, 115, 61, 0.22);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 252, 244, 0.82);
+
+    color: var(--site-body, #425A4A);
+
+    font-size:
+        clamp(11px, 0.78vw, 12.5px);
+}
+
+.research-page .research-approach-tags span:nth-child(even) {
+    border-color:
+        rgba(208, 166, 47, 0.34);
+}
+
+.research-page .research-approach-image {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+
+    margin: 0;
+}
+
+.research-page .research-approach-image img {
+    display: block;
+
+    width: min(100%, 330px);
+    height: auto;
+
+    border-radius: 16px;
+
+    mix-blend-mode: multiply;
+}
+
+
+/* The previous Integrative tools block is no longer used. */
+.research-page .research-integrative-tools {
+    display: none !important;
+}
+
+
+@media (max-width: 980px) {
+
+    .research-page .research-scale-strip {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .research-page .research-scale-arrow {
+        display: none;
+    }
+
+    .research-page .research-scale-step {
+        align-items: flex-start;
+    }
+
+    .research-page .research-approach-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(210px, 0.65fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .research-page .research-scale-strip {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .research-page .research-approach-row {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-approach-image {
+        justify-content: flex-start;
+    }
+
+    .research-page .research-approach-image img {
+        width: min(100%, 300px);
+    }
+}
+
+
+/* =========================================================
+   35. Approaches heading width refinement
+   ========================================================= */
+
+.research-page .research-approaches-heading {
+    max-width: 1120px;
+}
+
+.research-page .research-approaches-heading h2 {
+    width: 100%;
+    max-width: 1080px;
+
+    font-size:
+        clamp(29px, 2.65vw, 42px);
+
+    line-height: 1.08;
+}
+
+.research-page .research-approaches-heading > p:last-child {
+    max-width: 900px;
+}
+
+
+/* =========================================================
+   36. Stronger scale-flow arrows
+   ========================================================= */
+
+/*
+   Make the transitions between experimental scales an explicit
+   visual element rather than a faint text character.
+*/
+.research-page .research-scale-arrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 30px;
+
+    flex: 0 0 42px;
+
+    border:
+        1px solid rgba(208, 166, 47, 0.34);
+
+    border-radius: 999px;
+
+    background:
+        rgba(208, 166, 47, 0.12);
+
+    color: var(--site-green, #59733D);
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+
+    opacity: 1;
+
+    transform: translateY(-1px);
+}
+
+/* Add a subtle horizontal continuation line behind the arrow symbol. */
+.research-page .research-scale-arrow::before {
+    content: "";
+
+    width: 10px;
+    height: 1.5px;
+
+    margin-right: -5px;
+
+    background:
+        var(--site-green, #59733D);
+
+    opacity: 0.65;
+}
+
+
+/* Slightly increase the spacing around each connector. */
+.research-page .research-scale-strip {
+    column-gap:
+        clamp(10px, 1.35vw, 18px);
+}
+
+
+/* Tablet: keep the four stages, but simplify the connector treatment. */
+@media (max-width: 980px) {
+
+    .research-page .research-scale-arrow {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   37. Clean scale arrows + smaller approach illustrations
+   ========================================================= */
+
+/*
+   Replace the text-arrow/pill treatment with a simple graphic arrow:
+   one horizontal olive line plus a clear triangular arrowhead.
+*/
+.research-page .research-scale-arrow {
+    position: relative;
+
+    display: block;
+
+    width: 54px;
+    height: 18px;
+
+    flex: 0 0 54px;
+
+    border: 0;
+    border-radius: 0;
+
+    background: transparent;
+
+    color: transparent;
+
+    font-size: 0;
+    line-height: 0;
+
+    opacity: 1;
+
+    transform: none;
+}
+
+.research-page .research-scale-arrow::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 2px;
+
+    width: 42px;
+    height: 2px;
+
+    margin: 0;
+
+    background:
+        var(--site-green, #59733D);
+
+    opacity: 0.82;
+
+    transform: translateY(-50%);
+}
+
+.research-page .research-scale-arrow::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    right: 2px;
+
+    width: 0;
+    height: 0;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left:
+        8px solid var(--site-green, #59733D);
+
+    transform: translateY(-50%);
+}
+
+
+/*
+   Give text more visual weight and make the right-side illustrations
+   supporting elements rather than dominant elements.
+*/
+.research-page .research-approach-row {
+    grid-template-columns:
+        minmax(0, 1.38fr)
+        minmax(210px, 0.62fr);
+
+    gap:
+        clamp(30px, 3.5vw, 52px);
+}
+
+.research-page .research-approach-image img {
+    width: min(100%, 245px);
+
+    border-radius: 14px;
+}
+
+/* Field illustration is naturally wider; allow only a very small increase. */
+.research-page #approach-field .research-approach-image img {
+    width: min(100%, 260px);
+}
+
+
+@media (max-width: 980px) {
+
+    .research-page .research-scale-arrow {
+        display: none;
+    }
+
+    .research-page .research-approach-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(185px, 0.48fr);
+    }
+
+    .research-page .research-approach-image img {
+        width: min(100%, 220px);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .research-page .research-approach-row {
+        grid-template-columns: 1fr;
+    }
+
+    .research-page .research-approach-image img,
+    .research-page #approach-field .research-approach-image img {
+        width: min(100%, 220px);
+    }
+}
+
+
+/* =========================================================
+   38. Approach illustration crop safeguard
+   ========================================================= */
+
+.research-page .research-approach-image {
+    overflow: hidden;
+}
+
+.research-page .research-approach-image img {
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   39. Homepage hero balance refinement
+   ========================================================= */
+
+/*
+   The new headline is longer than the previous one.
+   Give the text more horizontal space and reduce the display size
+   so the heading reads as a headline rather than a poster title.
+*/
+.home-page-v2 .hero-content {
+    grid-template-columns:
+        minmax(0, 1.06fr)
+        minmax(430px, 0.94fr);
+
+    gap:
+        clamp(34px, 4vw, 58px);
+}
+
+.home-page-v2 .hero-text {
+    max-width: 680px;
+}
+
+.home-page-v2 .hero h1 {
+    width: 100%;
+    max-width: 680px;
+
+    font-size:
+        clamp(34px, 2.75vw, 46px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.026em;
+}
+
+.home-page-v2 .hero-image {
+    max-width: 530px;
+}
+
+
+/* Medium desktop: keep the sentence comfortable before stacking. */
+@media (max-width: 1100px) {
+
+    .home-page-v2 .hero-content {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(390px, 0.9fr);
+    }
+
+    .home-page-v2 .hero h1 {
+        font-size:
+            clamp(32px, 3.3vw, 42px);
+    }
+}
+
+
+/* =========================================================
+   40. Taller, more distinctive homepage hero card
+   ========================================================= */
+
+/*
+   Give the opening card more presence without making the headline
+   oversized. The extra height comes from internal breathing room
+   and a taller image, rather than larger typography.
+*/
+.home-page-v2 .hero-content {
+    min-height:
+        clamp(500px, 40vw, 590px);
+
+    padding:
+        clamp(42px, 4.2vw, 62px)
+        clamp(40px, 4vw, 58px);
+
+    align-items: center;
+
+    border-radius: 30px;
+}
+
+/* Let the text sit comfortably inside the larger card. */
+.home-page-v2 .hero-text {
+    align-self: center;
+}
+
+/* A taller image gives the card a stronger visual identity. */
+.home-page-v2 .hero-image {
+    max-width: 540px;
+}
+
+.home-page-v2 .hero-image img {
+    width: 100%;
+    height:
+        clamp(360px, 31vw, 455px);
+
+    aspect-ratio: auto;
+
+    object-fit: cover;
+    object-position: 52% center;
+
+    border-radius: 20px;
+}
+
+/* Slightly more separation between label, headline and body copy. */
+.home-page-v2 .hero-label {
+    margin-bottom:
+        clamp(22px, 2.2vw, 30px);
+}
+
+.home-page-v2 .hero-intro {
+    margin-top:
+        clamp(26px, 2.6vw, 34px);
+}
+
+
+/* Medium desktop */
+@media (max-width: 1100px) {
+
+    .home-page-v2 .hero-content {
+        min-height: 500px;
+
+        padding:
+            38px
+            34px;
+    }
+
+    .home-page-v2 .hero-image img {
+        height:
+            clamp(330px, 36vw, 405px);
+    }
+}
+
+
+/* Tablet and below: avoid forcing a tall empty card after stacking. */
+@media (max-width: 900px) {
+
+    .home-page-v2 .hero-content {
+        min-height: auto;
+
+        padding:
+            32px;
+    }
+
+    .home-page-v2 .hero-image img {
+        height:
+            clamp(300px, 58vw, 420px);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .home-page-v2 .hero-content {
+        padding: 24px;
+
+        border-radius: 20px;
+    }
+
+    .home-page-v2 .hero-image img {
+        height:
+            clamp(240px, 68vw, 340px);
+
+        border-radius: 16px;
+    }
+}
